@@ -83,8 +83,10 @@
           </p>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-9">
+    <div class="col-xs-12 col-sm-4 col-md-6">
         <div class="harp">
+          <!-- <img class="harp-circle" src="img/home-screen-bg.png" /> -->
+
           <div class="row">
             <div class="col-xs-2 col-xs-offset-1">
               <div class="string string-1" id="play1"></div>
@@ -115,6 +117,11 @@
       <audio id="sound3" src="audio/run-around.mp3">
         <audio id="sound4" src="audio/make-you-cry.mp3">
           <audio id="sound5" src="audio/say-goodbye.mp3">
+
+            <script
+              src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+              integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+              crossorigin="anonymous"></script>
 
   <script>
     let sound1 = document.getElementById('sound1');
@@ -159,7 +166,128 @@
       sound5.play();
         return false;
     };
+
+
+
+
+
+
+
+    // function vibrate(){
+    //   $('.string').addClass('vibrate');
+    //   setTimeout(function(){
+    //     $('.string').removeClass('vibrate');
+    //   }, 500);
+    // }
+
+
+    $(".string-1").click(function(){
+      $('.string-1').addClass('vibrate');
+      setTimeout(function(){
+        $('.string-1').removeClass('vibrate');
+      }, 300);
+    });
+
+    $(".string-2").click(function(){
+      $('.string-2').addClass('vibrate');
+      setTimeout(function(){
+        $('.string-2').removeClass('vibrate');
+      }, 300);
+    });
+
+    $(".string-3").click(function(){
+      $('.string-3').addClass('vibrate');
+      setTimeout(function(){
+        $('.string-3').removeClass('vibrate');
+      }, 300);
+    });
+
+    $(".string-4").click(function(){
+      $('.string-4').addClass('vibrate');
+      setTimeout(function(){
+        $('.string-4').removeClass('vibrate');
+      }, 300);
+    });
+
+    $(".string-5").click(function(){
+      $('.string-5').addClass('vibrate');
+      setTimeout(function(){
+        $('.string-5').removeClass('vibrate');
+      }, 300);
+    });
+
+
+
+
+
+    $(".string").click(function(event){
+      var target = $( event.target );
+      if ( target.is( ".string-1" ) ) {
+        $('.chord-1').css('border-color', '#591f49');
+      }
+      if ( target.is( ".string-2" ) ) {
+        $('.chord-1').css('border-color', '#902745');
+      }
+      if ( target.is( ".string-3" ) ) {
+        $('.chord-1').css('border-color', '#c63643');
+      }
+      if ( target.is( ".string-4" ) ) {
+        $('.chord-1').css('border-color', '#eb5a3a');
+      }
+      if ( target.is( ".string-5" ) ) {
+        $('.chord-1').css('border-color', '#ecb730');
+      }
+    });
+
+
+    // $('.string').one('click', function(event) {
+    //   event.preventDefault();
+    //   var target = $( event.target );
+    //   if ( target.is( ".string-1" ) ) {
+    //     $('.chord-1').css('border-color', '#591f49');
+    //   }
+    //   if ( target.is( ".string-2" ) ) {
+    //     $('.chord-1').css('border-color', '#902745');
+    //   }
+    //   if ( target.is( ".string-3" ) ) {
+    //     $('.chord-1').css('border-color', '#c63643');
+    //   }
+    //   if ( target.is( ".string-4" ) ) {
+    //     $('.chord-1').css('border-color', '#eb5a3a');
+    //   }
+    //   if ( target.is( ".string-5" ) ) {
+    //     $('.chord-1').css('border-color', '#ecb730');
+    //   }
+    // });
+
+
+    function handler( event ) {
+      var target = $( event.target );
+      if ( target.is( "li" ) ) {
+        target.children().toggle();
+      }
+    }
+    $( "ul" ).click( handler ).find( "ul" ).hide();
+
+
+
+
+
   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   </body>
