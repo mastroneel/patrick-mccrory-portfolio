@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" />
+    <link rel="stylesheet" href="css/app.css">
+    <title>Patrick McCrory</title>
+  </head>
+  <body>
+
+  <div class="header">
+    <div class="your-chords">
+      <p class="uppercase center">
+        Your Chords
+        <br>
+        <br>
+        <span class="color-indicator chord chord-1"></span>
+        <span class="color-indicator chord chord-2"></span>
+        <span class="color-indicator chord chord-3"></span>
+        <span class="color-indicator chord chord-4"></span>
+        <span class="color-indicator chord chord-5"></span>
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-3">
+        <div class="project-list">
+          <p class="uppercase">
+            Casper AR
+            <span class="color-indicator string-5"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-5"></span>
+            <span class="color-indicator string-4"></span>
+          </p>
+          <p class="uppercase">
+            Mirari Fashion
+            <span class="color-indicator string-5"></span>
+            <span class="color-indicator string-5"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-2"></span>
+            <span class="color-indicator string-3"></span>
+          </p>
+          <p class="uppercase">
+            Nike Numbers
+            <span class="color-indicator string-4"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-4"></span>
+            <span class="color-indicator string-5"></span>
+          </p>
+          <p class="uppercase">
+            Solace
+            <span class="color-indicator string-3"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-4"></span>
+            <span class="color-indicator string-5"></span>
+            <span class="color-indicator string-5"></span>
+          </p>
+          <p class="uppercase">
+            Idlemind
+            <span class="color-indicator string-5"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-4"></span>
+            <span class="color-indicator string-4"></span>
+          </p>
+          <p class="uppercase">
+            Nike Numbers
+            <span class="color-indicator string-4"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-4"></span>
+            <span class="color-indicator string-5"></span>
+          </p>
+          <p class="uppercase">
+            Solace
+            <span class="color-indicator string-3"></span>
+            <span class="color-indicator string-1"></span>
+            <span class="color-indicator string-4"></span>
+            <span class="color-indicator string-5"></span>
+            <span class="color-indicator string-5"></span>
+          </p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-9">
+        <div class="harp">
+          <div class="row">
+            <div class="col-xs-2 col-xs-offset-1">
+              <div class="string string-1" id="play1"></div>
+            </div>
+            <div class="col-xs-2">
+              <div class="string string-2" id="play2"></div>
+            </div>
+            <div class="col-xs-2">
+              <div class="string string-3" id="play3"></div>
+            </div>
+            <div class="col-xs-2">
+              <div class="string string-4" id="play4"></div>
+            </div>
+            <div class="col-xs-2">
+              <div class="string string-5" id="play5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <audio id="sound1" src="audio/give-you-up.mp3">
+    <audio id="sound2" src="audio/let-you-down.mp3">
+      <audio id="sound3" src="audio/run-around.mp3">
+        <audio id="sound4" src="audio/make-you-cry.mp3">
+          <audio id="sound5" src="audio/say-goodbye.mp3">
+
+  <script>
+    let sound1 = document.getElementById('sound1');
+    let sound2 = document.getElementById('sound2');
+    let sound3 = document.getElementById('sound3');
+    let sound4 = document.getElementById('sound4');
+    let sound5 = document.getElementById('sound5');
+    let play1 = document.getElementById('play1');
+    let play2 = document.getElementById('play2');
+    let play3 = document.getElementById('play3');
+    let play4 = document.getElementById('play4');
+    let play5 = document.getElementById('play5');
+
+
+
+    play1.onclick =
+      function() {
+      sound1.play();
+        return false;
+    };
+
+    play2.onclick =
+      function() {
+      sound2.play();
+        return false;
+    };
+
+    play3.onclick =
+      function() {
+      sound3.play();
+        return false;
+    };
+
+    play4.onclick =
+      function() {
+      sound4.play();
+        return false;
+    };
+
+    play5.onclick =
+      function() {
+      sound5.play();
+        return false;
+    };
+  </script>
+
+
+  </body>
+</html>

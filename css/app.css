@@ -1,0 +1,59 @@
+.header {
+  background: #000;
+  padding-top: 20px;
+  padding-left: 50px; }
+  .header p {
+    color: #fff; }
+  .header .color-indicator {
+    margin: 0 5px; }
+
+.harp {
+  width: 70%;
+  min-width: 290px;
+  margin: 0 auto; }
+
+.your-chords {
+  width: 150px;
+  height: 90px;
+  border-radius: 10px;
+  background: #000;
+  padding-top: 5px;
+  position: absolute;
+  right: 50px;
+  top: 20px; }
+
+.chord {
+  border: 4px solid #242424; }
+
+.string {
+  width: 0;
+  margin: 0 auto;
+  min-height: 90vh; }
+
+.string-1 {
+  border: 4px solid #591f49; }
+
+.string-2 {
+  border: 4px solid #902745; }
+
+.string-3 {
+  border: 4px solid #c63643; }
+
+.string-4 {
+  border: 4px solid #eb5a3a; }
+
+.string-5 {
+  border: 4px solid #ecb730; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial"; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.center {
+  text-align: center; }
+
+/*# sourceMappingURL=app.css.map */
