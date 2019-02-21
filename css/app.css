@@ -7,6 +7,15 @@
 @font-face {
   font-family: 'Futura Light';
   src: url("../fonts/futura-light.ttf"); }
+.project {
+  display: none; }
+  .project p {
+    color: #fff;
+    font-size: 60px; }
+
+.visible {
+  display: block; }
+
 .header {
   background-color: #000;
   background-size: 100vw;

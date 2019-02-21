@@ -9,6 +9,14 @@
   </head>
   <body>
 
+  <div class="sandbox-projects">
+    <div class="project casper"><p>CASPER</p></div>
+    <div class="project mirari"><p>MIRARI</p></div>
+    <div class="project nike"><p>NIKE</p></div>
+    <div class="project solace"><p>SOLACE</p></div>
+    <div class="project idlemind"><p>IDLEMIND</p></div>
+  </div>
+
   <div class="header">
     <div class="your-chords">
       <p class="uppercase center">
@@ -65,7 +73,7 @@
             <span class="color-indicator string-4"></span>
             <span class="color-indicator string-4"></span>
           </p>
-          <p class="uppercase">
+          <!-- <p class="uppercase">
             Nike Numbers
             <span class="color-indicator string-4"></span>
             <span class="color-indicator string-1"></span>
@@ -80,7 +88,7 @@
             <span class="color-indicator string-4"></span>
             <span class="color-indicator string-5"></span>
             <span class="color-indicator string-5"></span>
-          </p>
+          </p> -->
       </div>
     </div>
     <div class="col-xs-12 col-sm-4 col-md-6">
@@ -89,19 +97,19 @@
 
           <div class="row">
             <div class="col-xs-2 col-xs-offset-1">
-              <div class="string string-1" id="play1"></div>
+              <div class="string string-1 click-1" id="play1"></div>
             </div>
             <div class="col-xs-2">
-              <div class="string string-2" id="play2"></div>
+              <div class="string string-2 click-1" id="play2"></div>
             </div>
             <div class="col-xs-2">
-              <div class="string string-3" id="play3"></div>
+              <div class="string string-3 click-1" id="play3"></div>
             </div>
             <div class="col-xs-2">
-              <div class="string string-4" id="play4"></div>
+              <div class="string string-4 click-1" id="play4"></div>
             </div>
             <div class="col-xs-2">
-              <div class="string string-5" id="play5"></div>
+              <div class="string string-5 click-1" id="play5"></div>
             </div>
           </div>
         </div>
@@ -118,10 +126,15 @@
         <audio id="sound4" src="audio/make-you-cry.mp3">
           <audio id="sound5" src="audio/say-goodbye.mp3">
 
-            <script
+            <!-- <script
               src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
               integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-              crossorigin="anonymous"></script>
+              crossorigin="anonymous"></script> -->
+
+              <script
+  src="https://code.jquery.com/jquery-1.8.3.min.js"
+  integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
+  crossorigin="anonymous"></script>
 
   <script>
     let sound1 = document.getElementById('sound1');
@@ -220,28 +233,14 @@
 
 
 
-    $(".string").click(function(event){
-      var target = $( event.target );
-      if ( target.is( ".string-1" ) ) {
-        $('.chord-1').css('border-color', '#591f49');
-      }
-      if ( target.is( ".string-2" ) ) {
-        $('.chord-1').css('border-color', '#902745');
-      }
-      if ( target.is( ".string-3" ) ) {
-        $('.chord-1').css('border-color', '#c63643');
-      }
-      if ( target.is( ".string-4" ) ) {
-        $('.chord-1').css('border-color', '#eb5a3a');
-      }
-      if ( target.is( ".string-5" ) ) {
-        $('.chord-1').css('border-color', '#ecb730');
-      }
-    });
 
 
-    // $('.string').one('click', function(event) {
-    //   event.preventDefault();
+
+
+
+
+    // $(".click-1").click(function(event){
+    //   $('.string').removeClass("click-1").addClass("click-2");
     //   var target = $( event.target );
     //   if ( target.is( ".string-1" ) ) {
     //     $('.chord-1').css('border-color', '#591f49');
@@ -259,6 +258,282 @@
     //     $('.chord-1').css('border-color', '#ecb730');
     //   }
     // });
+
+
+    // $(".click-2").click(function(event){
+    //   $('.string').removeClass("click-2");
+    //   var target = $( event.target );
+    //   if ( target.is( ".string-1" ) ) {
+    //     $('.chord-2').css('border-color', '#591f49');
+    //   }
+    //   if ( target.is( ".string-2" ) ) {
+    //     $('.chord-2').css('border-color', '#902745');
+    //   }
+    //   if ( target.is( ".string-3" ) ) {
+    //     $('.chord-2').css('border-color', '#c63643');
+    //   }
+    //   if ( target.is( ".string-4" ) ) {
+    //     $('.chord-2').css('border-color', '#eb5a3a');
+    //   }
+    //   if ( target.is( ".string-5" ) ) {
+    //     $('.chord-2').css('border-color', '#ecb730');
+    //   }
+    // });
+
+
+    // $('.click-1').one('click', function(event) {
+    //   event.preventDefault();
+    //   $('.string').removeClass("click-1");
+    //   $('.string').addClass("click-2");
+    //   var target = $( event.target );
+    //   if ( target.is( ".string-1" ) ) {
+    //     $('.chord-1').css('border-color', '#591f49');
+    //   }
+    //   if ( target.is( ".string-2" ) ) {
+    //     $('.chord-1').css('border-color', '#902745');
+    //   }
+    //   if ( target.is( ".string-3" ) ) {
+    //     $('.chord-1').css('border-color', '#c63643');
+    //   }
+    //   if ( target.is( ".string-4" ) ) {
+    //     $('.chord-1').css('border-color', '#eb5a3a');
+    //   }
+    //   if ( target.is( ".string-5" ) ) {
+    //     $('.chord-1').css('border-color', '#ecb730');
+    //   }
+    // });
+    //
+    // $('.click-2').one('click', function(event) {
+    //   event.preventDefault();
+    //   $('.string').removeClass("click-2");
+    //   var target = $( event.target );
+    //   if ( target.is( ".string-1" ) ) {
+    //     $('.chord-2').css('border-color', '#591f49');
+    //   }
+    //   if ( target.is( ".string-2" ) ) {
+    //     $('.chord-2').css('border-color', '#902745');
+    //   }
+    //   if ( target.is( ".string-3" ) ) {
+    //     $('.chord-2').css('border-color', '#c63643');
+    //   }
+    //   if ( target.is( ".string-4" ) ) {
+    //     $('.chord-2').css('border-color', '#eb5a3a');
+    //   }
+    //   if ( target.is( ".string-5" ) ) {
+    //     $('.chord-2').css('border-color', '#ecb730');
+    //   }
+    // });
+
+
+    var array1 = [1, 2, 3, 4, 5, 6];
+    var array2 = [1, 2, 3, 4, 5, 6];
+
+    var chordArray = [];
+
+    var casperArray = [5,1,1,5,4];
+    var mirariArray = [5,5,1,2,3];
+    var nikeArray = [4,1,1,4,5];
+    var solaceArray = [3,1,4,5,5];
+    var idlemindArray = [5,1,1,4,4];
+
+    // $(".string-5").click(function(){
+    //   if (array2.toString() === array1.toString()) {
+    //      $('.casper').addClass('visible');
+    //   }
+    // });
+
+    $('.click-1').live('click', function(event) {
+      $('.string').removeClass("click-1");
+      $('.string').addClass("click-2");
+      var target = $( event.target );
+      if ( target.is( ".string-1" ) ) {
+        $('.chord-1').css('border-color', '#591f49');
+        chordArray.push(1);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-2" ) ) {
+        $('.chord-1').css('border-color', '#902745');
+        chordArray.push(2);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-3" ) ) {
+        $('.chord-1').css('border-color', '#c63643');
+        chordArray.push(3);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-4" ) ) {
+        $('.chord-1').css('border-color', '#eb5a3a');
+        chordArray.push(4);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-5" ) ) {
+        $('.chord-1').css('border-color', '#ecb730');
+        chordArray.push(5);
+        console.log(chordArray);
+      }
+    });
+
+    $('.click-2').live('click', function(event) {
+      $('.string').removeClass("click-2");
+      $('.string').addClass("click-3");
+      var target = $( event.target );
+      if ( target.is( ".string-1" ) ) {
+        $('.chord-2').css('border-color', '#591f49');
+        chordArray.push(1);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-2" ) ) {
+        $('.chord-2').css('border-color', '#902745');
+        chordArray.push(2);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-3" ) ) {
+        $('.chord-2').css('border-color', '#c63643');
+        chordArray.push(3);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-4" ) ) {
+        $('.chord-2').css('border-color', '#eb5a3a');
+        chordArray.push(4);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-5" ) ) {
+        $('.chord-2').css('border-color', '#ecb730');
+        chordArray.push(5);
+        console.log(chordArray);
+      }
+    });
+
+    $('.click-3').live('click', function(event) {
+      $('.string').removeClass("click-3");
+      $('.string').addClass("click-4");
+      var target = $( event.target );
+      if ( target.is( ".string-1" ) ) {
+        $('.chord-3').css('border-color', '#591f49');
+        chordArray.push(1);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-2" ) ) {
+        $('.chord-3').css('border-color', '#902745');
+        chordArray.push(2);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-3" ) ) {
+        $('.chord-3').css('border-color', '#c63643');
+        chordArray.push(3);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-4" ) ) {
+        $('.chord-3').css('border-color', '#eb5a3a');
+        chordArray.push(4);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-5" ) ) {
+        $('.chord-3').css('border-color', '#ecb730');
+        chordArray.push(5);
+        console.log(chordArray);
+      }
+    });
+
+    $('.click-4').live('click', function(event) {
+      $('.string').removeClass("click-4");
+      $('.string').addClass("click-5");
+      var target = $( event.target );
+      if ( target.is( ".string-1" ) ) {
+        $('.chord-4').css('border-color', '#591f49');
+        chordArray.push(1);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-2" ) ) {
+        $('.chord-4').css('border-color', '#902745');
+        chordArray.push(2);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-3" ) ) {
+        $('.chord-4').css('border-color', '#c63643');
+        chordArray.push(3);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-4" ) ) {
+        $('.chord-4').css('border-color', '#eb5a3a');
+        chordArray.push(4);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-5" ) ) {
+        $('.chord-4').css('border-color', '#ecb730');
+        chordArray.push(5);
+        console.log(chordArray);
+      }
+    });
+
+    $('.click-5').live('click', function(event) {
+      $('.string').removeClass("click-5");
+      $('.string').addClass("click-1");
+      // $('.string').addClass("click-3");
+      var target = $( event.target );
+      if ( target.is( ".string-1" ) ) {
+        $('.chord-5').css('border-color', '#591f49');
+        chordArray.push(1);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-2" ) ) {
+        $('.chord-5').css('border-color', '#902745');
+        chordArray.push(2);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-3" ) ) {
+        $('.chord-5').css('border-color', '#c63643');
+        chordArray.push(3);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-4" ) ) {
+        $('.chord-5').css('border-color', '#eb5a3a');
+        chordArray.push(4);
+        console.log(chordArray);
+      }
+      if ( target.is( ".string-5" ) ) {
+        $('.chord-5').css('border-color', '#ecb730');
+        chordArray.push(5);
+        console.log(chordArray);
+      }
+      if (chordArray.toString() === casperArray.toString()) {
+         $('.project').removeClass('visible');
+         $('.casper').addClass('visible');
+      }
+      if (chordArray.toString() === mirariArray.toString()) {
+         $('.project').removeClass('visible');
+         $('.mirari').addClass('visible');
+      }
+      if (chordArray.toString() === nikeArray.toString()) {
+         $('.project').removeClass('visible');
+         $('.nike').addClass('visible');
+      }
+      if (chordArray.toString() === solaceArray.toString()) {
+         $('.project').removeClass('visible');
+         $('.solace').addClass('visible');
+      }
+      if (chordArray.toString() === idlemindArray.toString()) {
+         $('.project').removeClass('visible');
+         $('.idlemind').addClass('visible');
+      }
+      if (
+        chordArray.toString() != idlemindArray.toString() &&
+        chordArray.toString() != mirariArray.toString() &&
+        chordArray.toString() != nikeArray.toString() &&
+        chordArray.toString() != solaceArray.toString() &&
+        chordArray.toString() != idlemindArray.toString()
+      ) {
+         // alert("Try again");
+         chordArray = [];
+         console.log(chordArray);
+         $('.chord').css('border-color', '#242424');
+      }
+      setTimeout(function(){
+        chordArray = [];
+        console.log(chordArray);
+        $('.chord').css('border-color', '#242424');
+      }, 50);
+    });
 
 
     function handler( event ) {

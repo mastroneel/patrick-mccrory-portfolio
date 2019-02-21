@@ -1,3 +1,19 @@
+
+
+.project {
+  display: none;
+  p {
+    color: #fff;
+    font-size: 60px;
+  }
+}
+
+
+
+.visible {
+  display: block;
+}
+
 .header {
   background-color: $black;
   // background-image: url('../img/home-screen-bg.png');
