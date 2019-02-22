@@ -120,11 +120,11 @@
 
 
 
-  <audio id="sound1" src="audio/give-you-up.mp3">
-    <audio id="sound2" src="audio/let-you-down.mp3">
-      <audio id="sound3" src="audio/run-around.mp3">
-        <audio id="sound4" src="audio/make-you-cry.mp3">
-          <audio id="sound5" src="audio/say-goodbye.mp3">
+  <audio id="sound1" src="audio/1.mp3">
+    <audio id="sound2" src="audio/2.mp3">
+      <audio id="sound3" src="audio/3.mp3">
+        <audio id="sound4" src="audio/4.mp3">
+          <audio id="sound5" src="audio/5.mp3">
 
             <!-- <script
               src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -336,13 +336,31 @@
     var solaceArray = [3,1,4,5,5];
     var idlemindArray = [5,1,1,4,4];
 
+
+
+
     // $(".string-5").click(function(){
     //   if (array2.toString() === array1.toString()) {
     //      $('.casper').addClass('visible');
     //   }
     // });
 
+    // var timer = setInterval(function() {
+    //   chordArray = [];
+    //   console.log(chordArray);
+    //   $('.chord').css('border-color', '#242424');
+    //   $('.string').addClass("click-1");
+    //   $('.string').removeClass("click-2");
+    //   $('.string').removeClass("click-3");
+    //   $('.string').removeClass("click-4");
+    //   $('.string').removeClass("click-5");
+    // }, 3000);
+
+    var timeout1, timeout2, timeout3, timeout4;
+
+
     $('.click-1').live('click', function(event) {
+      // clearInterval(timer);
       $('.string').removeClass("click-1");
       $('.string').addClass("click-2");
       var target = $( event.target );
@@ -371,9 +389,20 @@
         chordArray.push(5);
         console.log(chordArray);
       }
+      timeout1 = setTimeout(function() {
+        chordArray = [];
+        console.log(chordArray);
+        $('.chord').css('border-color', '#242424');
+        $('.string').addClass("click-1");
+        $('.string').removeClass("click-2");
+        $('.string').removeClass("click-3");
+        $('.string').removeClass("click-4");
+        $('.string').removeClass("click-5");
+      }, 3000);
     });
 
     $('.click-2').live('click', function(event) {
+      clearTimeout(timeout1);
       $('.string').removeClass("click-2");
       $('.string').addClass("click-3");
       var target = $( event.target );
@@ -402,9 +431,20 @@
         chordArray.push(5);
         console.log(chordArray);
       }
+      timeout2 = setTimeout(function() {
+        chordArray = [];
+        console.log(chordArray);
+        $('.chord').css('border-color', '#242424');
+        $('.string').addClass("click-1");
+        $('.string').removeClass("click-2");
+        $('.string').removeClass("click-3");
+        $('.string').removeClass("click-4");
+        $('.string').removeClass("click-5");
+      }, 3000);
     });
 
     $('.click-3').live('click', function(event) {
+      clearTimeout(timeout2);
       $('.string').removeClass("click-3");
       $('.string').addClass("click-4");
       var target = $( event.target );
@@ -433,9 +473,20 @@
         chordArray.push(5);
         console.log(chordArray);
       }
+      timeout3 = setTimeout(function() {
+        chordArray = [];
+        console.log(chordArray);
+        $('.chord').css('border-color', '#242424');
+        $('.string').addClass("click-1");
+        $('.string').removeClass("click-2");
+        $('.string').removeClass("click-3");
+        $('.string').removeClass("click-4");
+        $('.string').removeClass("click-5");
+      }, 3000);
     });
 
     $('.click-4').live('click', function(event) {
+      clearTimeout(timeout3);
       $('.string').removeClass("click-4");
       $('.string').addClass("click-5");
       var target = $( event.target );
@@ -464,9 +515,20 @@
         chordArray.push(5);
         console.log(chordArray);
       }
+      timeout4 = setTimeout(function() {
+        chordArray = [];
+        console.log(chordArray);
+        $('.chord').css('border-color', '#242424');
+        $('.string').addClass("click-1");
+        $('.string').removeClass("click-2");
+        $('.string').removeClass("click-3");
+        $('.string').removeClass("click-4");
+        $('.string').removeClass("click-5");
+      }, 3000);
     });
 
     $('.click-5').live('click', function(event) {
+      clearTimeout(timeout4);
       $('.string').removeClass("click-5");
       $('.string').addClass("click-1");
       // $('.string').addClass("click-3");
@@ -497,52 +559,69 @@
         console.log(chordArray);
       }
       if (chordArray.toString() === casperArray.toString()) {
-         $('.project').removeClass('visible');
-         $('.casper').addClass('visible');
+         setTimeout(function(){
+           $('.project').removeClass('visible');
+           $('.casper').addClass('visible');
+         }, 1000);
       }
-      if (chordArray.toString() === mirariArray.toString()) {
-         $('.project').removeClass('visible');
-         $('.mirari').addClass('visible');
+      else if (chordArray.toString() === mirariArray.toString()) {
+         setTimeout(function(){
+           $('.project').removeClass('visible');
+           $('.mirari').addClass('visible');
+         }, 1000);
       }
-      if (chordArray.toString() === nikeArray.toString()) {
-         $('.project').removeClass('visible');
-         $('.nike').addClass('visible');
+      else if (chordArray.toString() === nikeArray.toString()) {
+         setTimeout(function(){
+           $('.project').removeClass('visible');
+           $('.nike').addClass('visible');
+         }, 1000);
       }
-      if (chordArray.toString() === solaceArray.toString()) {
-         $('.project').removeClass('visible');
-         $('.solace').addClass('visible');
+      else if (chordArray.toString() === solaceArray.toString()) {
+         setTimeout(function(){
+           $('.project').removeClass('visible');
+           $('.solace').addClass('visible');
+         }, 1000);
       }
-      if (chordArray.toString() === idlemindArray.toString()) {
-         $('.project').removeClass('visible');
-         $('.idlemind').addClass('visible');
+      else if (chordArray.toString() === idlemindArray.toString()) {
+         setTimeout(function(){
+           $('.project').removeClass('visible');
+           $('.idlemind').addClass('visible');
+         }, 1000);
       }
-      if (
-        chordArray.toString() != idlemindArray.toString() &&
-        chordArray.toString() != mirariArray.toString() &&
-        chordArray.toString() != nikeArray.toString() &&
-        chordArray.toString() != solaceArray.toString() &&
-        chordArray.toString() != idlemindArray.toString()
-      ) {
-         // alert("Try again");
-         chordArray = [];
-         console.log(chordArray);
-         $('.chord').css('border-color', '#242424');
+      // if (
+      //   chordArray.toString() != idlemindArray.toString() &&
+      //   chordArray.toString() != mirariArray.toString() &&
+      //   chordArray.toString() != nikeArray.toString() &&
+      //   chordArray.toString() != solaceArray.toString() &&
+      //   chordArray.toString() != idlemindArray.toString()
+      // ) {
+      else {
+        $('.your-chords').addClass('vibrate-2');
+        setTimeout(function(){
+          $('.your-chords').removeClass('vibrate-2');
+        }, 300);
+         setTimeout(function(){
+           // alert("Try again");
+           chordArray = [];
+           console.log(chordArray);
+           $('.chord').css('border-color', '#242424');
+         }, 1000);
       }
       setTimeout(function(){
         chordArray = [];
         console.log(chordArray);
         $('.chord').css('border-color', '#242424');
-      }, 50);
+      }, 1000);
     });
 
 
-    function handler( event ) {
-      var target = $( event.target );
-      if ( target.is( "li" ) ) {
-        target.children().toggle();
-      }
-    }
-    $( "ul" ).click( handler ).find( "ul" ).hide();
+    // function handler( event ) {
+    //   var target = $( event.target );
+    //   if ( target.is( "li" ) ) {
+    //     target.children().toggle();
+    //   }
+    // }
+    // $( "ul" ).click( handler ).find( "ul" ).hide();
 
 
 

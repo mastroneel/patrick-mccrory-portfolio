@@ -1,6 +1,14 @@
 
 
 .project {
+  width: 100vw;
+  min-height: 100vh;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #242424;
   display: none;
   p {
     color: #fff;
@@ -97,9 +105,6 @@
 
 // Sandbox
 
-body {
-  background: hsl(230, 20%, 15%);
-}
 
 .string {
   position: relative;
@@ -112,7 +117,13 @@ body {
   -webkit-animation: vibration 0.3s;
 }
 
+.vibrate-2 {
+  -webkit-animation: vibration2 0.3s;
+}
+
 $moveBy: 5px;
+
+$moveBy2: 10px;
 
 @-webkit-keyframes vibration {
   0%     {left:-$moveBy; top:-$moveBy;}
@@ -125,7 +136,19 @@ $moveBy: 5px;
   87.5%  {left:$moveBy; top:$moveBy;}
   100%   {left:0px; top:$moveBy;}
 }
-@-webkit-keyframes chgop {
-  0%   {opacity: 1.0}
-  100% {opacity: 0.6}
+
+@-webkit-keyframes vibration2 {
+  0%     {margin-left:-$moveBy2; margin-top:-$moveBy2;}
+  12.5%  {margin-left:$moveBy2; margin-top:0px;}
+  25.0%  {margin-left:-$moveBy2; margin-top:$moveBy2;}
+  37.5%  {margin-left:0px; margin-top:-$moveBy2;}
+  50.0%  {margin-left:0px; margin-top:$moveBy2;}
+  62.5%  {margin-left:$moveBy2; margin-top:-$moveBy2;}
+  75.0%  {margin-left:-$moveBy2; margin-top:0;}
+  87.5%  {margin-left:$moveBy2; margin-top:$moveBy2;}
+  100%   {margin-left:0px; margin-top:$moveBy2;}
 }
+// @-webkit-keyframes chgop {
+//   0%   {opacity: 1.0}
+//   100% {opacity: 0.6}
+// }

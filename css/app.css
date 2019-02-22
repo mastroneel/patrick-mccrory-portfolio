@@ -8,6 +8,11 @@
   font-family: 'Futura Light';
   src: url("../fonts/futura-light.ttf"); }
 .project {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #242424;
   display: none; }
   .project p {
     color: #fff;
@@ -66,9 +71,6 @@
 .string-5 {
   border: 4px solid #ecb730; }
 
-body {
-  background: #1f212e; }
-
 .string {
   position: relative;
   display: inline-block;
@@ -77,6 +79,9 @@ body {
 
 .vibrate {
   -webkit-animation: vibration 0.3s; }
+
+.vibrate-2 {
+  -webkit-animation: vibration2 0.3s; }
 
 @-webkit-keyframes vibration {
   0% {
@@ -106,11 +111,34 @@ body {
   100% {
     left: 0px;
     top: 5px; } }
-@-webkit-keyframes chgop {
+@-webkit-keyframes vibration2 {
   0% {
-    opacity: 1.0; }
+    margin-left: -10px;
+    margin-top: -10px; }
+  12.5% {
+    margin-left: 10px;
+    margin-top: 0px; }
+  25.0% {
+    margin-left: -10px;
+    margin-top: 10px; }
+  37.5% {
+    margin-left: 0px;
+    margin-top: -10px; }
+  50.0% {
+    margin-left: 0px;
+    margin-top: 10px; }
+  62.5% {
+    margin-left: 10px;
+    margin-top: -10px; }
+  75.0% {
+    margin-left: -10px;
+    margin-top: 0; }
+  87.5% {
+    margin-left: 10px;
+    margin-top: 10px; }
   100% {
-    opacity: 0.6; } }
+    margin-left: 0px;
+    margin-top: 10px; } }
 body {
   margin: 0;
   padding: 0;
