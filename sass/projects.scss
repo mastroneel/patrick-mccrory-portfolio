@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:600');
+
+.project {
+  width: 100vw;
+  min-height: 100vh;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #242424;
+  // display: none;
+  // opacity: 0;
+  overflow: hidden;
+  transition: 0.2s;
+  p {
+    color: #fff;
+    font-size: 60px;
+  }
+  .close-button {
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+  }
+}
+
+.visible {
+  // display: block;
+  // opacity: 1;
+  // transition: 0.2s;
+}
