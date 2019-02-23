@@ -5,31 +5,60 @@
   // background-image: url('../img/home-screen-bg.png');
   background-size: 100vw;
   background-repeat: no-repeat;
-  padding-top: 20px;
-  padding-left: 50px;
-  padding-bottom: 100px;
+  // padding-top: 20px;
+  // padding-left: 50px;
+  // padding-bottom: 100px;
+  height: 100vh;
+  overflow: hidden;
+  // margin-top: -100vh;
   p {
     color: $white;
   }
   .color-indicator {
     margin: 0 5px;
   }
-  // .project-list {
-  //   z-index: 100;
-  // }
+  .project-list {
+    position: relative;
+    z-index: 20;
+    margin-top: 50px;
+    margin-left: 50px;
+    p {
+      letter-spacing: 1px;
+    }
+  }
+  .header-content {
+    width: 100vw;
+    margin-top: -100vh;
+  }
 }
 
 .harp {
-  width: 70%;
+  text-align: center;
+  width: 50%;
   min-width: 290px;
   margin: 0 auto;
-  // .harp-circle {
-  //   width: 100vw;
-  //   z-index: 10;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  // }
+  margin-top: -230px;
+  position: relative;
+  z-index: 11;
+}
+
+// .harp-circle {
+//   // background-color: $black;
+//   // background-image: url('../img/home-screen-bg.png');
+//   width: 100vw;
+//   height: auto;
+//   position: relative;
+//   z-index: 10;
+// }
+
+.harp-circle-background {
+  // background-color: $black;
+  background-image: url('../img/home-screen-bg.png');
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
 }
 
 .your-chords {
@@ -41,7 +70,9 @@
   // position: absolute;
   float: right;
   margin-right: 50px;
-  margin-top: 10px;
+  // margin-top: 10px;
+  position: relative;
+  z-index: 20;
 }
 
 .chord {
@@ -50,8 +81,9 @@
 
 .string {
   width: 0;
+  display: block;
   margin: 0 auto;
-  min-height: 90vh;
+  min-height: 110vh;
 }
 .string-1 {
   border: 4px solid $purple;
@@ -131,3 +163,59 @@ $moveBy2: 10px;
 //   0%   {opacity: 1.0}
 //   100% {opacity: 0.6}
 // }
+
+
+
+
+@media (max-width: 950px) {
+  .header {
+    .row {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      padding: 0 !important;
+    }
+    .your-chords {
+      font-size: 12px;
+      height: 80px;
+    }
+    .project-list {
+      margin-left: 20px;
+      margin-top: 30px;
+      width: 210px;
+      background-color: $black;
+      border-radius: 10px;
+      padding: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .header {
+    .harp {
+      width: 40%;
+    }
+    .row {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      padding: 0 !important;
+    }
+    .your-chords {
+      font-size: 12px;
+      height: 80px;
+    }
+    .project-list {
+      margin-left: 20px;
+      margin-top: 30px;
+      width: 210px;
+      background-color: $black;
+      border-radius: 10px;
+      padding: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
