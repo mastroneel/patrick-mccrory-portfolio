@@ -19,8 +19,9 @@
   }
   .project-list {
     position: relative;
+    pointer-events: none;
     z-index: 20;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 50px;
     p {
       letter-spacing: 1px;
@@ -37,9 +38,21 @@
   width: 50%;
   min-width: 290px;
   margin: 0 auto;
-  margin-top: -230px;
+  margin-top: -450px;
   position: relative;
   z-index: 9;
+}
+
+.logo {
+  margin-top: 20px;
+  margin-left: 50px;
+  position: relative;
+  z-index: 110;
+  // pointer-events: none;
+  width: 140px;
+  img {
+    width: 100%;
+  }
 }
 
 // .harp-circle {
@@ -72,6 +85,7 @@
   // position: absolute;
   float: right;
   margin-right: 50px;
+  margin-top: 20px;
   // margin-top: 10px;
   position: relative;
   z-index: 20;
@@ -116,12 +130,13 @@
   z-index: 100;
   width: 100vw !important;
   background-color: $black;
-  padding: 20px;
+  padding: 20px 0;
   margin-left: 0 !important;
   margin-top: -135px !important;
   overflow-x: scroll !important;
+  pointer-events: all !important;
   .project-mobile-inner {
-    width: 1200px;
+    width: 2300px;
   }
   p {
     display: inline;
@@ -217,6 +232,12 @@ $moveBy2: 10px;
       margin-left: 0 !important;
       padding: 0 !important;
     }
+    .logo {
+      margin-left: 15px;
+    }
+    .harp {
+      margin-top: -200px;
+    }
     .your-chords {
       font-size: 12px;
       height: 80px;
@@ -276,6 +297,11 @@ $moveBy2: 10px;
 }
 
 @media (max-width: 450px) {
+  .header {
+    .logo {
+      width: 100px;
+    }
+  }
   .project-list-mobile {
     p {
       font-size: 12px;

@@ -8,6 +8,9 @@
 @font-face {
   font-family: 'Futura Light';
   src: url("../fonts/futura-light.ttf"); }
+@font-face {
+  font-family: 'Futura Condensed';
+  src: url("../fonts/futura-medium-condensed.ttf"); }
 .header {
   background-color: #000;
   background-size: 100vw;
@@ -20,8 +23,9 @@
     margin: 0 5px; }
   .header .project-list {
     position: relative;
+    pointer-events: none;
     z-index: 20;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 50px; }
     .header .project-list p {
       letter-spacing: 1px; }
@@ -34,9 +38,18 @@
   width: 50%;
   min-width: 290px;
   margin: 0 auto;
-  margin-top: -230px;
+  margin-top: -450px;
   position: relative;
   z-index: 9; }
+
+.logo {
+  margin-top: 20px;
+  margin-left: 50px;
+  position: relative;
+  z-index: 110;
+  width: 140px; }
+  .logo img {
+    width: 100%; }
 
 .harp-circle-background {
   background-image: url("../img/home-screen-bg.png");
@@ -55,6 +68,7 @@
   padding-top: 5px;
   float: right;
   margin-right: 50px;
+  margin-top: 20px;
   position: relative;
   z-index: 20; }
 
@@ -90,12 +104,13 @@
   z-index: 100;
   width: 100vw !important;
   background-color: #000;
-  padding: 20px;
+  padding: 20px 0;
   margin-left: 0 !important;
   margin-top: -135px !important;
-  overflow-x: scroll !important; }
+  overflow-x: scroll !important;
+  pointer-events: all !important; }
   .project-list-mobile .project-mobile-inner {
-    width: 1200px; }
+    width: 2300px; }
   .project-list-mobile p {
     display: inline;
     margin: 0 15px; }
@@ -192,6 +207,10 @@
     margin-right: 0 !important;
     margin-left: 0 !important;
     padding: 0 !important; }
+  .header .logo {
+    margin-left: 15px; }
+  .header .harp {
+    margin-top: -200px; }
   .header .your-chords {
     font-size: 12px;
     height: 80px;
@@ -216,27 +235,63 @@
     font-size: 12px;
     height: 80px; } }
 @media (max-width: 450px) {
+  .header .logo {
+    width: 100px; }
+
   .project-list-mobile p {
     font-size: 12px; } }
 .project {
-  width: 100vw;
+  width: 100vw !important;
   min-height: 100vh;
-  padding-top: 20px;
-  padding-left: 20px;
-  background-color: #242424;
+  background-color: #000;
   overflow: hidden;
   transition: 0.2s; }
   .project p {
-    color: #fff;
-    font-size: 60px; }
-  .project .close-button {
-    font-family: 'Nunito', sans-serif;
-    color: #fff;
-    font-size: 50px;
+    color: #fff; }
+  .project .navbar {
+    height: 60px;
     position: absolute;
-    top: 10px;
-    right: 50px; }
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: -webkit-linear-gradient(#353535, #141414);
+    background: -o-linear-gradient(#353535, #141414);
+    background: linear-gradient(#353535, #141414); }
+    .project .navbar .logo-project {
+      margin-left: 20px !important;
+      margin-top: 10px !important; }
+      .project .navbar .logo-project img {
+        width: 80%; }
+    .project .navbar .close-button {
+      font-family: 'Nunito', sans-serif;
+      color: #fff;
+      font-size: 50px;
+      position: absolute;
+      top: -10px;
+      right: 20px; }
+  .project .project-info {
+    padding: 20px 15px 40px 15px;
+    margin-top: 60px;
+    background: #2a2a2a;
+    color: #fff; }
+    .project .project-info .row {
+      width: 80%;
+      margin: 0 auto; }
+    .project .project-info .light-gray {
+      color: #a2a2a2; }
+    .project .project-info .title h1 {
+      font-size: 32px;
+      font-family: "Futura Condensed";
+      letter-spacing: 1px; }
+  .project .project-images {
+    width: 100vw; }
+    .project .project-images img {
+      width: 100%;
+      margin-top: 12px; }
 
+@media (max-width: 1100px) {
+  .project .project-info .row {
+    width: 100%; } }
 body {
   margin: 0;
   padding: 0;
@@ -256,5 +311,11 @@ p {
 
 .invisible {
   display: none; }
+
+.light {
+  font-family: "Futura Light"; }
+
+.light-gray {
+  color: #a2a2a2; }
 
 /*# sourceMappingURL=app.css.map */

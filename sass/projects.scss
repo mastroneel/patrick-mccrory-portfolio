@@ -1,31 +1,90 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:600');
 
 .project {
-  width: 100vw;
+  width: 100vw !important;
   min-height: 100vh;
   // position: absolute;
   // top: 0;
   // left: 0;
-  padding-top: 20px;
-  padding-left: 20px;
-  background-color: #242424;
+  // padding-top: 20px;
+  // padding-left: 20px;
+  background-color: $black;
   // display: none;
   // opacity: 0;
   overflow: hidden;
   transition: 0.2s;
   p {
     color: #fff;
-    font-size: 60px;
+    // font-size: 60px;
   }
-  .close-button {
-    font-family: 'Nunito', sans-serif;
-    color: #fff;
-    font-size: 50px;
+  .navbar {
+    height: 60px;
     position: absolute;
-    top: 10px;
-    right: 50px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background:
+        -webkit-linear-gradient(rgba(53, 53, 53, 1), rgba(20, 20, 20, 1));
+    background:
+        -o-linear-gradient(rgba(53, 53, 53, 1), rgba(20, 20, 20, 1));
+    background:
+        linear-gradient(rgba(53, 53, 53, 1), rgba(20, 20, 20, 1));
+    .logo-project {
+      margin-left: 20px !important;
+      margin-top: 10px !important;
+      img {
+        width: 80%;
+      }
+    }
+    .close-button {
+      font-family: 'Nunito', sans-serif;
+      color: #fff;
+      font-size: 50px;
+      position: absolute;
+      top: -10px;
+      right: 20px;
+    }
+  }
+  .project-info {
+    padding: 20px 15px 40px 15px;
+    margin-top: 60px;
+    background: #2a2a2a;
+    color: $white;
+    .row {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .light-gray {
+      color: $light-gray;
+    }
+    .title h1 {
+      font-size: 32px;
+      font-family: $condensed-font;
+      letter-spacing: 1px;
+    }
+  }
+  .project-images {
+    width: 100vw;
+    img {
+      width: 100%;
+      margin-top: 12px;
+    }
   }
 }
+
+
+@media (max-width: 1100px) {
+  .project {
+    .project-info {
+      .row {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
 
 .visible {
   // display: block;
