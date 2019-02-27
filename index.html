@@ -424,7 +424,118 @@
           </div> -->
         </div>
       </div>
-      <div class="project-images project-images-mobile">
+      <div>
+
+
+  <div class="grid">
+    <div class="grid-sizer"></div>
+    <div class="grid-item">
+      <img src="img/artwork/artwork_1.jpg" />
+    </div>
+    <div class="grid-item">
+      <img src="img/artwork/artwork_2.jpg" />
+    </div>
+    <div class="grid-item">
+      <img src="img/artwork/artwork_3.jpg" />
+    </div>
+    <div class="grid-item">
+      <img src="img/artwork/artwork_4.jpg">
+    </div>
+    <div class="grid-item">
+      <img src="img/artwork/artwork_5.jpg">
+    </div>
+    <div class="grid-item">
+      <img src="img/artwork/artwork_6.jpg">
+    </div>
+    <div class="grid-item">
+      <img src="img/artwork/artwork_7.jpg">
+    </div>
+    <div class="grid-item">
+      <img src="img/artwork/artwork_8.jpg">
+    </div>
+    <div class="grid-item">
+      <img src="img/artwork/artwork_9.jpg">
+    </div>
+    <div class="grid-item">
+      <img src="img/artwork/artwork_10.jpg">
+    </div>
+
+  </div>
+
+
+
+
+
+        <!-- <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="grid-item i-1">
+          <img src="img/artwork/artwork_1.jpg">
+        </div>
+        <div class="grid-item i-2">
+          <img src="img/artwork/artwork_2.jpg">
+        </div>
+        <div class="grid-item i-3">
+          <img src="img/artwork/artwork_3.jpg">
+        </div>
+        <div class="grid-item">
+          <img src="img/artwork/artwork_4.jpg">
+        </div>
+        <div class="grid-item">
+          <img src="img/artwork/artwork_5.jpg">
+        </div>
+        <div class="grid-item">
+          <img src="img/artwork/artwork_6.jpg">
+        </div>
+        <div class="grid-item">
+          <img src="img/artwork/artwork_7.jpg">
+        </div>
+        <div class="grid-item">
+          <img src="img/artwork/artwork_8.jpg">
+        </div>
+        <div class="grid-item">
+          <img src="img/artwork/artwork_9.jpg">
+        </div>
+        <div class="grid-ite--height3">
+          <img src="img/artwork/artwork_10.jpg">
+        </div>
+      </div> -->
+
+
+
+        <!-- <div id="masonryContainer">
+          <div class="item">
+            <img src="img/artwork/artwork_1.jpg">
+          </div>
+          <div class="item">
+            <img src="img/artwork/artwork_2.jpg">
+          </div>
+          <div class="item">
+            <img src="img/artwork/artwork_3.jpg">
+          </div>
+          <div class="item">
+            <img src="img/artwork/artwork_4.jpg">
+          </div>
+          <div class="item">
+            <img src="img/artwork/artwork_5.jpg">
+          </div>
+          <div class="item">
+            <img src="img/artwork/artwork_6.jpg">
+          </div>
+          <div class="item">
+            <img src="img/artwork/artwork_7.jpg">
+          </div>
+          <div class="item">
+            <img src="img/artwork/artwork_8.jpg">
+          </div>
+          <div class="item">
+            <img src="img/artwork/artwork_9.jpg">
+          </div>
+          <div class="item">
+            <img src="img/artwork/artwork_10.jpg">
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="project-images project-images-mobile">
         <img src="img/artwork/artwork_1.jpg">
         <img src="img/artwork/artwork_2.jpg">
         <img src="img/artwork/artwork_3.jpg">
@@ -469,7 +580,7 @@
             <div class="art art-10"></div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="project sketches">
@@ -500,7 +611,7 @@
         <img src="img/sketches/sketch_6.png" />
         <img src="img/sketches/sketch_7.png" />
         <img src="img/sketches/sketch_8.png" />
-        <img src="img/sketches/sketch_19.png" />
+        <img src="img/sketches/sketch_9.png" />
         <img src="img/sketches/sketch_10.png" />
         <img src="img/sketches/sketch_11.png" />
         <img src="img/sketches/sketch_12.png" />
@@ -773,9 +884,61 @@
   integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
   crossorigin="anonymous"></script>
 
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+  <script src="https://npmcdn.com/isotope-layout@3.0.6/dist/isotope.pkgd.js"></script>
 
   <script>
+
+
+  // var $grid = $('.grid').isotope({
+  //   itemSelector: '.grid-item',
+  //   percentPosition: true,
+  //   masonry: {
+  //     // columnWidth: '.grid-sizer',
+  //     // columnWidth: 50,
+  //     // gutter: 10,
+  //     columnWidth: 100,
+  //     horizontalOrder: true
+  //   }
+  // });
+
+
+  // var $grid = $('.grid').isotope({
+  //   itemSelector: '.grid-item',
+  //   percentPosition: true,
+  //   masonry: {
+  //     columnWidth: '.grid-sizer'
+  //   }
+  // });
+
+  // jQuery( function() {
+    // now doc is ready, make selection
+    // use another selector, not .isotope,
+    // since that is dynamically added in Isotope v1
+  $(window).load(function(){
+
+    var $grid = jQuery('.grid');
+
+    $grid.isotope({
+        itemSelector: '.grid-item',
+        // masonry is default layoutMode, no need to specify it
+        // sortBy: 'random',
+        columnWidth: '.grid-sizer',
+        // masonry: {
+        //   gutter: 10
+        // }
+    });
+  });
+    // use imagesLoaded, instead of window.load
+    // $grid.imagesLoaded( function() {
+    //     $grid.isotope({
+    //         itemSelector: '.grid-item',
+    //         // masonry is default layoutMode, no need to specify it
+    //         sortBy: 'random',
+    //         columnWidth: '.grid-sizer'
+    //     });
+    // })
+// });
 
 
   $('.right-button').click(function(){
@@ -898,7 +1061,7 @@
 
     $('.project').hide();
 
-    // $('.about').show();
+    // $('.artwork').show();
 
 
 
