@@ -113,6 +113,14 @@
   }
 }
 
+@media (max-width: 767px) {
+  .about {
+    .text-container {
+      padding-top: 60px;
+    }
+  }
+}
+
 .artwork {
   .art {
     min-height: 400px;
