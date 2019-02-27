@@ -430,7 +430,7 @@
   <div class="grid">
     <div class="grid-sizer"></div>
     <div class="grid-item">
-      <img src="img/artwork/artwork_1.jpg" />
+      <img src="img/artwork/artwork1.jpg" />
     </div>
     <div class="grid-item">
       <img src="img/artwork/artwork_2.jpg" />
@@ -915,20 +915,47 @@
     // now doc is ready, make selection
     // use another selector, not .isotope,
     // since that is dynamically added in Isotope v1
-  $(window).load(function(){
+  // $(window).load(function(){
+  //
+  //   var $grid = jQuery('.grid');
+  //
+  //   $grid.isotope({
+  //       itemSelector: '.grid-item',
+  //       // masonry is default layoutMode, no need to specify it
+  //       // sortBy: 'random',
+  //       columnWidth: '.grid-sizer',
+  //       // masonry: {
+  //       //   gutter: 10
+  //       // }
+  //   });
+  // });
 
-    var $grid = jQuery('.grid');
 
-    $grid.isotope({
-        itemSelector: '.grid-item',
-        // masonry is default layoutMode, no need to specify it
-        // sortBy: 'random',
-        columnWidth: '.grid-sizer',
-        // masonry: {
-        //   gutter: 10
-        // }
-    });
+  // var $grid = $('.grid').imagesLoaded( function() {
+  //   // init Isotope when grid's images have loaded
+  //   $grid.isotope({
+  //     itemSelector: '.grid-item',
+  //     // masonry is default layoutMode, no need to specify it
+  //     // sortBy: 'random',
+  //     columnWidth: '.grid-sizer',
+  //     // masonry: {
+  //     //   gutter: 10
+  //     // }
+  //   });
+  // });
+
+$(window).load(function() {
+  var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    // masonry is default layoutMode, no need to specify it
+    // sortBy: 'random',
+    columnWidth: '.grid-sizer',
+    // masonry: {
+    //   gutter: 10
+    // }
   });
+});
+
     // use imagesLoaded, instead of window.load
     // $grid.imagesLoaded( function() {
     //     $grid.isotope({
@@ -1346,6 +1373,15 @@
            $('.project').fadeOut();
            $('.artwork').fadeIn();
            $('.header').addClass('invisible');
+           var $grid = $('.grid').isotope({
+             itemSelector: '.grid-item',
+             // masonry is default layoutMode, no need to specify it
+             // sortBy: 'random',
+             columnWidth: '.grid-sizer',
+             // masonry: {
+             //   gutter: 10
+             // }
+           });
          }, 1000);
       }
       else if (chordArray.toString() === sketchesArray.toString()) {

@@ -347,6 +347,7 @@
     top: 0;
     left: 0;
     width: 100vw;
+    z-index: 1000;
     background: -webkit-linear-gradient(#353535, #141414);
     background: -o-linear-gradient(#353535, #141414);
     background: linear-gradient(#353535, #141414); }
