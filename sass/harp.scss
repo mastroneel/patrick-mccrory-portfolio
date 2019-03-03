@@ -28,7 +28,7 @@
     position: relative;
     pointer-events: none;
     z-index: 20;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-left: 20px;
     p {
       letter-spacing: 1px;
@@ -124,6 +124,7 @@
   width: 50px;
   display: block;
   margin: 0 auto;
+  cursor:pointer !important;
 }
 
 @media (max-width: 500px) {
@@ -138,6 +139,8 @@
   margin: 0 auto;
   // min-height: 650px;
   height: 110vh;
+  cursor:pointer !important;
+  transition: 0.4s;
 }
 .string-1 {
   border: 5px solid $purple;
@@ -159,6 +162,14 @@
   border: 5px solid $yellow;
   background-color: $yellow;
 }
+
+.dark {
+  // border-color: $dark-purple;
+  // background-color: $dark-purple;
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
 
 .string-1-color {
   background-color: $purple;

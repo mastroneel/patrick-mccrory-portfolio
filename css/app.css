@@ -32,7 +32,7 @@
     position: relative;
     pointer-events: none;
     z-index: 20;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-left: 20px; }
     .header .project-list p {
       letter-spacing: 1px;
@@ -102,7 +102,8 @@
 .string-container {
   width: 50px;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  cursor: pointer !important; }
 
 @media (max-width: 500px) {
   .string-container {
@@ -111,7 +112,9 @@
   width: 0 !important;
   display: block;
   margin: 0 auto;
-  height: 110vh; }
+  height: 110vh;
+  cursor: pointer !important;
+  transition: 0.4s; }
 
 .string-1 {
   border: 5px solid #591f49;
@@ -132,6 +135,10 @@
 .string-5 {
   border: 5px solid #ecb730;
   background-color: #ecb730; }
+
+.dark {
+  opacity: 0.5;
+  transition: 0.4s; }
 
 .string-1-color {
   background-color: #591f49; }
@@ -353,7 +360,8 @@
     background: linear-gradient(#353535, #141414); }
     .project .navbar .logo-project {
       margin-left: 20px !important;
-      margin-top: 10px !important; }
+      margin-top: 10px !important;
+      width: 120px; }
       .project .navbar .logo-project img {
         width: 80%; }
     .project .navbar .close-button {
@@ -390,15 +398,17 @@
   background-position: left;
   background-repeat: no-repeat; }
   .about .text-container {
-    padding-top: 120px;
-    width: 80%;
+    padding-top: 80px;
+    width: 70%;
     margin: 0 auto;
     min-width: 290px; }
     .about .text-container .title {
       color: #fff;
       font-family: "Futura Condensed";
-      font-size: 40px;
-      letter-spacing: 2px; }
+      font-size: 48px;
+      letter-spacing: 3px; }
+    .about .text-container p {
+      font-size: 20px; }
     .about .text-container ul {
       list-style-type: none;
       padding: 0;
@@ -419,9 +429,17 @@
           margin: 0 auto;
           margin-top: 7px; }
 
+@media (max-width: 905px) {
+  .about .text-container {
+    width: 90%; } }
 @media (max-width: 767px) {
   .about .text-container {
     padding-top: 60px; } }
+@media (max-width: 414px) {
+  .about .text-container {
+    padding-top: 90px; }
+    .about .text-container .title {
+      font-size: 35px; } }
 .artwork .item {
   margin: 10px;
   float: left; }

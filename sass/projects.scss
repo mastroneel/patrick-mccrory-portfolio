@@ -33,6 +33,7 @@
     .logo-project {
       margin-left: 20px !important;
       margin-top: 10px !important;
+      width: 120px;
       img {
         width: 80%;
       }
@@ -80,15 +81,18 @@
   background-position: left;
   background-repeat: no-repeat;
   .text-container {
-    padding-top: 120px;
-    width: 80%;
+    padding-top: 80px;
+    width: 70%;
     margin: 0 auto;
     min-width: 290px;
     .title {
       color: $white;
       font-family: $condensed-font;
-      font-size: 40px;
-      letter-spacing: 2px;
+      font-size: 48px;
+      letter-spacing: 3px;
+    }
+    p {
+      font-size: 20px;
     }
     ul {
       list-style-type: none;
@@ -115,10 +119,29 @@
   }
 }
 
+@media (max-width: 905px) {
+  .about {
+    .text-container {
+      width: 90%;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .about {
     .text-container {
       padding-top: 60px;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .about {
+    .text-container {
+      padding-top: 90px;
+      .title {
+        font-size: 35px;
+      }
     }
   }
 }
