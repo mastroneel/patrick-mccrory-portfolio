@@ -891,9 +891,13 @@
 
   <script>
 
-    $('.header').height(window.innerHeight + 'px');
 
-  $('.harp-circle-background').height(window.innerHeight + 'px');
+  if($(window).width() >= 450){
+    $('.header').height(window.innerHeight + 'px');
+    $('.harp-circle-background').height(window.innerHeight + 'px');
+  }
+
+
 
 
   // var $grid = $('.grid').isotope({
