@@ -67,13 +67,10 @@
     width: 100%; }
 
 .harp-circle-background {
-  position: absolute;
-  top: 0;
-  left: 0;
   background-image: url("../img/home_screen_background_extra_space_1.png");
   height: 100vh;
   min-height: 470px;
-  overflow: hidden;
+  overflow: hidden !important;
   background-position: center center !important;
   background-size: cover;
   position: relative;
