@@ -389,6 +389,12 @@
     position: absolute;
     bottom: 0;
     left: 0; } }
+@media (min-width: 500px) {
+  .project-list-mobile-container {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0; } }
 .project {
   width: 100vw !important;
   min-height: 100vh;
