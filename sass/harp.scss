@@ -472,16 +472,23 @@ $moveBy2: 10px;
   .header {
     .logo {
       width: 100px;
-      margin-top: 10px;
+      // margin-top: 10px;
+      position: absolute;
+      top: -10px;
+      left: -5px;
     }
     .harp {
       width: 116%;
       margin-left: -8%;
+      margin-top: 0;
     }
     .your-chords {
       font-size: 11px;
       height: 60px;
       width: 120px;
+      position: absolute;
+      top: 10px;
+      right: -5px;
       // margin-top: 10px;
       .color-indicator.chord {
         height: 25px !important;

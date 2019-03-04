@@ -355,14 +355,20 @@
 @media (max-width: 450px) {
   .header .logo {
     width: 100px;
-    margin-top: 10px; }
+    position: absolute;
+    top: -10px;
+    left: -5px; }
   .header .harp {
     width: 116%;
-    margin-left: -8%; }
+    margin-left: -8%;
+    margin-top: 0; }
   .header .your-chords {
     font-size: 11px;
     height: 60px;
-    width: 120px; }
+    width: 120px;
+    position: absolute;
+    top: 10px;
+    right: -5px; }
     .header .your-chords .color-indicator.chord {
       height: 25px !important;
       width: 8px !important; }
