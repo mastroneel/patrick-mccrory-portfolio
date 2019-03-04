@@ -348,7 +348,9 @@
       border-width: 4px; } }
 @media (max-width: 470px) {
   .header .harp-circle-background {
-    background-image: url("../img/home_screen_mobile_background_2.png"); } }
+    background-image: url("../img/home_screen_mobile_background_2.png");
+    background-size: cover;
+    background-repeat: no-repeat; } }
 @media (max-width: 450px) {
   .header .logo {
     width: 100px;
