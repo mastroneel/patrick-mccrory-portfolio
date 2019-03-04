@@ -155,6 +155,10 @@
 .string-5-color {
   background-color: #ecb730; }
 
+.project-list-mobile-container {
+  position: relative;
+  margin-top: -60px; }
+
 .project-list-mobile {
   display: none;
   position: absolute !important;
@@ -331,7 +335,14 @@
     background-image: url("../img/home_screen_mobile_background.png"); } }
 @media (max-width: 450px) {
   .header .logo {
-    width: 100px; } }
+    width: 100px; }
+  .header .your-chords {
+    font-size: 12px;
+    height: 60px;
+    width: 140px; }
+    .header .your-chords .color-indicator.chord {
+      height: 20px !important;
+      width: 8px !important; } }
 @media (max-height: 455px) {
   .harp {
     position: absolute;
