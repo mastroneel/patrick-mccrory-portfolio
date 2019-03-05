@@ -3,19 +3,11 @@
 .project {
   width: 100vw !important;
   min-height: 100vh;
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // padding-top: 20px;
-  // padding-left: 20px;
   background-color: $black;
-  // display: none;
-  // opacity: 0;
   overflow: hidden;
   transition: 0.2s;
   p {
     color: #fff;
-    // font-size: 60px;
   }
   .navbar {
     height: 60px;
@@ -148,89 +140,11 @@
 }
 
 .artwork {
-  // opacity: 0;
   .item {
-    // width: 220px;
     margin: 10px;
     float: left;
   }
-  // .art {
-  //   min-height: 400px;
-  //   background-size: cover;
-  //   margin-top: 15px;
-  // }
-  // .art-1 {
-  //   background-image: url('../img/artwork/artwork_1.jpg');
-  // }
-  // .art-2 {
-  //   background-image: url('../img/artwork/artwork_2.jpg');
-  // }
-  // .art-3 {
-  //   background-image: url('../img/artwork/artwork_3.jpg');
-  // }
-  // .art-4 {
-  //   background-image: url('../img/artwork/artwork_4.jpg');
-  // }
-  // .art-5 {
-  //   background-image: url('../img/artwork/artwork_5.jpg');
-  // }
-  // .art-6 {
-  //   background-image: url('../img/artwork/artwork_6.jpg');
-  // }
-  // .art-7 {
-  //   background-image: url('../img/artwork/artwork_7.jpg');
-  //   min-height: 500px;
-  // }
-  // .art-8 {
-  //   background-image: url('../img/artwork/artwork_8.jpg');
-  //   min-height: 500px;
-  // }
-  // .art-9 {
-  //   background-image: url('../img/artwork/artwork_9.jpg');
-  //   min-height: 600px;
-  // }
-  // .art-10 {
-  //   background-image: url('../img/artwork/artwork_10.jpg');
-  //   min-height: 600px;
-  // }
 }
-
-
-
-/* ---- isotope ---- */
-
-/* clear fix */
-// .grid:after {
-//   content: '';
-//   display: block;
-//   clear: both;
-// }
-
-/* ---- .grid-item ---- */
-
-// .grid-sizer,
-// .grid-item {
-//   width: 33.333%;
-// }
-//
-// .grid-item {
-//   float: left;
-//   height: 160px;
-// }
-//
-// .grid-item img {
-//   display: block;
-//   width: 100%;
-// }
-//
-// .grid-item--height2 { height: 200px; }
-// .grid-item--height3 { height: 240px; }
-
-// .grid-item--width2 {
-//   width: 66.666%;
-// }
-
-
 
 .artwork {
   .project-images-mobile {
@@ -273,27 +187,6 @@
 
 
 
-//
-// .visible {
-//   // display: block;
-//   // opacity: 1;
-//   // transition: 0.2s;
-// }
-
-
-
-
-
-
-
-// * { box-sizing: border-box; }
-//
-// /* force scrollbar */
-// html { overflow-y: scroll; }
-//
-// body {
-//   font-family: sans-serif;
-// }
 
 /* ---- isotope ---- */
 
